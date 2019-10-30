@@ -1,0 +1,18 @@
+<h1>ALL FLATS</h1>
+
+<div class="cards">
+  <% @flats.each do |flat| %>
+    <div class="card-trip">
+      <img src="https://picsum.photos/600/800" />
+      <div class="card-trip-infos">
+        <div>
+          <h2><%= link_to flat.name, flat_path(flat) %></h2>
+          <p><%= flat.address %></p>
+          <p><%= flat.description %></p>
+          <p><%= flat.number_of_guests %></p>
+        </div>
+      </div>
+      <h2 class="card-trip-pricing"><%= flat.price_per_night %> €/night</h2>
+    </div>
+  <% end %>
+</div>
